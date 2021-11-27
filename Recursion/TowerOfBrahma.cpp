@@ -4,14 +4,14 @@
 using namespace std;
 
 
-void TOH(int n,char Frompeg,char Topeg,char Auxpeg){
+void TOB(int n,char Frompeg,char Topeg,char Auxpeg){
     if(n==1){                                                       // terminating  condition
         cout << "Move " << n <<  " from " << Frompeg << " to " << Topeg << endl; // if we have only one disk move from source to destination bar directly
         return;
     }
-    TOH(n-1,Frompeg,Auxpeg,Topeg); // Move n-1 disks from frompeg to auxpeg using topeg as auxillary
+    TOB(n-1,Frompeg,Auxpeg,Topeg); // Move n-1 disks from frompeg to auxpeg using topeg as auxillary
     cout << "Move " << n <<  " from " << Frompeg << " to " << Topeg << endl; 
-    TOH(n-1,Auxpeg,Topeg,Frompeg); // Move n-1 disks from auxpeg to topeg using frompeg as auxillary
+    TOB(n-1,Auxpeg,Topeg,Frompeg); // Move n-1 disks from auxpeg to topeg using frompeg as auxillary
 
 }
 int main(){
@@ -19,7 +19,7 @@ int main(){
     cout << "Enter number of disks to be moved \n";
     int n;
     cin >> n;
-    TOH(n,'A','B','C');
+    TOB(n,'A','C','B');
     return 0;
 }
 
