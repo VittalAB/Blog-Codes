@@ -6,3 +6,7 @@ struct node{
     struct node *right;
     struct node *left;
 };
+
+
+
+/* This code is contributed by Vittal AB*/

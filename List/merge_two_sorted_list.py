@@ -75,3 +75,6 @@ if __name__=="__main__":
     l2.insert(25)
 
     l1.merge(l1.head,l2.head)
+
+
+# /* This code is contributed by Vittal AB*/
